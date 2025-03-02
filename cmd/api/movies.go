@@ -206,7 +206,6 @@ func (app *application) listMoviesHandler(w http.ResponseWriter, r *http.Request
 		app.failedValidationResponse(w, r, v.Errors)
 		return
 	}
-	407
 
 	movies, err := app.models.Movies.GetAll(input.Title, input.Genres, input.Filters)
 	if err != nil {
