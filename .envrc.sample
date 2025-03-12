@@ -1,0 +1,2 @@
+export GREENLIGHT_DB_DSN=
+export JWT_SECRET=
