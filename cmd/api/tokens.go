@@ -2,7 +2,6 @@ package main
 
 import (
 	"errors"
-	"fmt"
 	"net/http"
 	"strconv"
 	"time"
@@ -45,8 +44,6 @@ func (app *application) createAuthenticationTokenHandler(w http.ResponseWriter, 
 		}
 		return
 	}
-	fmt.Printf("%+v", user)
-
 	match, err := user.Password.Matches(input.Password)
 	if err != nil {
 		app.serverErrorResponse(w, r, err)
